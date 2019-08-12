@@ -7,6 +7,7 @@ class User {
     User.cnt++;
     this.userId = User.cnt;
     this.books = [];
+    this.username = "";
   }
 
   getId(){

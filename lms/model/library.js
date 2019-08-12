@@ -1,11 +1,17 @@
+//constants
 const maxRequests = 5;
 const MAX_BOOKS = 5;
+
 class Library {
     books = [];
     recommendation = [];
     librarians = [];
+    users = [];
     librarianSize() {
         return this.librarians.length;
+    }
+    usersSize(){
+        return this.users.length;
     }
     async addRequest(type, userID, bookID, recommendation){
         for(let i = 0;i < this.librarianSize();i++){
@@ -19,6 +25,10 @@ class Library {
             }
         }
     }
+    registerUser (user){
+        this.users.push(user);
+    }
+
     registerLibrarian (librarian) {
         this.librarians.push(librarian);
     }

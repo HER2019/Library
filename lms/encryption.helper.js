@@ -1,6 +1,6 @@
 class EncryptionHelper {
 
     static encrypt(string) {
-        return string.toString().toLowerCase();
+        return  CryptoJS.AES.encrypt(string, "Secret Passphrase");
     }
 }

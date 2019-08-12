@@ -13,9 +13,9 @@ class AuthService {
         }
 
         if(user.password === EncryptionHelper.encrypt(password)) {
-            let userPermissions = this.permissionService.getPermissions(user.role);
+            let userPermissions = this.permissionService.getPermissions(username);
 
-            sessionStorage.setItem('authInfo', {
+            sessionStorage.setItem(userId, {
                 user: user,
                 permissions: userPermissions
             })
@@ -26,11 +26,11 @@ class AuthService {
         return user;
     }
 
-    logout() {
-        sessionStorage.removeItem('authInfo');
+    logout(username) {
+        sessionStorage.removeItem(username);
     }
 
-    isLogined() {
-        return sessionStorage.getItem('authInfo') != null;
+    isLogined(username) {
+        return sessionStorage.getItem(username) != null;
     }
 }
