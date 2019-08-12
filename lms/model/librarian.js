@@ -1,10 +1,5 @@
 class Librarian {
-    requests = [];
-    getRequestSize() {
-        return this.requests.length;
-    }
     addRequest(request){
-        this.requests.push(request);
         this.parseRequest(request);
     }
     constructor(librarianId, firstName, lastName, libary) {
@@ -20,7 +15,7 @@ class Librarian {
             return this.responseForBookRenewal (request[userId], request[bookID]);
         else if (request[type]===3)
             return this.responseForBookReturn (request[userId], request[bookID]);
-        else if (request[type]===4)
+        else if (request[type]===5)
             return this.responseForBookRecommend (new
             Recommendation(request[userId], request[bookID], request[recommendation]));
     }

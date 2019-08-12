@@ -7,7 +7,7 @@ class Library {
     librarianSize() {
         return this.librarians.length;
     }
-    addRequest(type, userID, bookID, recommendation){
+    async addRequest(type, userID, bookID, recommendation){
         for(let i = 0;i < this.librarianSize();i++){
             if(this.librarians[i] < maxRequests){
                 this.librarians[0].addRequest({

@@ -1,11 +1,11 @@
 class User {
-  static var cnt = 0;
+  static cnt = 0;
   constructor(permission, name, lastName){
     this.name = name;
     this.lastName = lastName;
     this.permission = permission;
-    this.cnt++;
-    this.userId = cnt;
+    User.cnt++;
+    this.userId = User.cnt;
     this.books = [];
   }
 
