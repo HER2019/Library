@@ -4,10 +4,5 @@ class Recommendation {
         this.bookId = bookId;
         this.message = message;
     }
-    get UserID() {
-        return this.userId;
-    }
-    get BookID() {
-        return this.bookId;
-    }
+
 }
